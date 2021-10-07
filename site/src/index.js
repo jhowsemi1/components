@@ -1,17 +1,30 @@
+import { StrictMode } from "react";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import DetalheProduto from './components/detalhesproduto'
+import Carrinho from './components/carrinho'
+import App from './components/home'
+//import Contador from "./components/comunicacaoComps/contador";
+import './index.css';
+//import App from './App';
+
+//import reportWebVitals from './reportWebVitals';
+const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StrictMode>
+    <BrowserRouter> 
+     <Switch>
+        <Route path="/components/contador" exact={true} component={Contador} />
+        <Route path="/detalhe" component={DetalheProduto} />
+        <Route path="/Carrinho" component={Carrinho} />
+      
+     </Switch>
+    </BrowserRouter>
+  </StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ 
