@@ -8,7 +8,7 @@ import Contador from "../contador/index"
 export default function CarrinhoItem(props) {
     const [produto, setProduto] = useState(props.info)
      // Carrega a Variável de Estado com o parâmetro recebido da tela Carrinho
-}
+
 
 function alterarQtd(qtd) {
     setProduto({...produto, qtd});  // Atualiza a variável de Estado
@@ -44,5 +44,5 @@ function alterarQtd(qtd) {
 
      </Container>
  )
-
+ }
 
