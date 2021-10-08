@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import styled from "styled-components";
 
 
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,7 +50,6 @@ export default function Contador(props) {
          props.onChange(qtd);
          // Chama componente PAI para alterar a Quantidade
      }, [qtd])
-}
 
 return (
     <Container> 
@@ -62,3 +62,5 @@ return (
         <div className="mais" onClick={incrementar}> + </div> 
     </Container>
 )
+
+}
